@@ -5,6 +5,9 @@ body, html {
   height: 100%;
   margin: 0;
 }
+#div1 {
+  font-size:48px;
+}
 
 .bgimg {
   background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
@@ -42,6 +45,7 @@ hr {
   width: 40%;
 }
 </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
 <div class="bgimg">
@@ -56,9 +60,24 @@ hr {
   <div class="bottomleft">
     <p>Koshish Foundation</p>
   </div>
+<div id="div1" class="fa">
+  </div>
 </div>
 
 <script>
+function hourglass() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf251;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf252;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf253;";
+    }, 2000);
+}
+hourglass();
+setInterval(hourglass, 3000);
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 1, 2021 12:00:00").getTime();
 
@@ -88,6 +107,5 @@ var countdownfunction = setInterval(function() {
   }
 }, 1000);
 </script>
-
 </body>
 </html>
